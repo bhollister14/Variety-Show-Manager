@@ -7,12 +7,9 @@ import java.io.*;
 
 public class VarietyShowManager
 {
-  public static void main(String args[])throws IOException
+  public static void main(String args[])//throws IOException
   {
     Scanner kb = new Scanner(System.in);
-    if (kb.nextLine().equals("create new"))
-    {
-      FileRead.createNewFile(kb.nextLine());
-    }
+    VSstartup.isCorrectFile();
   }
 }

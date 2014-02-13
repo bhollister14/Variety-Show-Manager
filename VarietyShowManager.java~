@@ -1,0 +1,20 @@
+//Brianna-Marie Hollister
+//Feb. 5, 2014
+//Variety Show Manager (File Writing Practice)
+
+import java.util.Scanner;
+import java.io.*;
+
+public class VarietyShowManager
+{
+  public static void main(String args[])throws IOException
+  {
+    Scanner kb = new Scanner(System.in);
+    File defaultFile = new File("default.txt");
+    //TO DO: later, when a new file is made, put the file name
+    //  in default.txt to load the other file
+    defaultFile.createNewFile();
+    FileWriter writer = new FileWriter(defaultFile);
+    VSstartup.isCorrectFile("default");
+  }
+}

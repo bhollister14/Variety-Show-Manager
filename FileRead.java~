@@ -1,9 +1,6 @@
 //http://www.tutorialspoint.com/java/java_filewriter_class.htm
 //a lot of code was from this website (writing to and reading from text files
 
-//http://www.mkyong.com/java/how-to-read-file-from-java-bufferedreader-example/
-//also helped me with reading from text files
-
 import java.io.*;
 import java.util.Scanner;
 

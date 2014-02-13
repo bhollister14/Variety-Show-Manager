@@ -4,9 +4,6 @@
 
 import java.util.Scanner;
 import java.io.*;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 
 public class VSstartup
 {
@@ -16,13 +13,12 @@ public class VSstartup
      * if incorrect, moves to select another file or create new file.
      */
     Scanner kb1 = new Scanner(System.in);
-    System.out.println(fileName+".txt will load. Is this the correct file? (Y/N)");
+    System.out.println(fileName+" will load. Is this the correct file? (Y/N)");
     String correctFile = new String(kb1.nextLine());
     if (correctFile.equals("N"))
     {
       selectOtherFile();
     }
-    else openFile(fileName);
   }
   
   public static void selectOtherFile()throws IOException
@@ -43,7 +39,6 @@ public class VSstartup
       createOtherFile();
     }
   }
-  
   public static void createOtherFile()throws IOException
   {
     Scanner kb3 = new Scanner(System.in);
@@ -51,22 +46,5 @@ public class VSstartup
     File file = new File(kb3.nextLine()+".txt");
     file.createNewFile();
     FileWriter writer = new FileWriter(file);
-  }
-  
-  public static String openFile(String fileName)throws IOException
-  {
-    FileReader fr = new FileReader(fileName+".txt"); 
-    BufferedReader textReader = new BufferedReader(fr);
-    String textData = new String();
-    textData = textReader.readLine();
-    textReader.close();
-    return textData;
-  }
-  
-  public static void writeToFile(FileWriter writer)throws IOException
-  {
-    writer.write("hi"); 
-    writer.flush();
-    writer.close();
   }
 }

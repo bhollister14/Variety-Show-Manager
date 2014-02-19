@@ -1,0 +1,24 @@
+//Brianna-Marie Hollister
+//Feb. 13, 2014
+//Variety Show Manager (Writer)
+
+import java.util.Scanner;
+import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class VSwriter
+{
+  public static void writeToFile(FileWriter writer)throws IOException
+  {
+    writer.write("blank"); 
+    writer.flush();
+    writer.close();
+  }
+  
+  public static void addActor(FileWriter writer)throws IOException
+  {
+    
+  }
+}
